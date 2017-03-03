@@ -1,0 +1,9 @@
+<md-toolbar color="primary">
+  {{title}}
+</md-toolbar>
+<div></div>
+<p>Gold: {{gold}}</p>
+<md-card style="width:300px;float:left;" *ngFor="let property of asyncProperties | async">
+  <md-card-header>{{property.name}}</md-card-header>
+  <md-card-actions><button md-raised-button color="primary" (click)="visit(property)">Visit</button></md-card-actions>
+</md-card>
